@@ -1,6 +1,13 @@
 
 
 function myKeyPress(e){
+ // TODO: Add a condition to ignore entries beyond 10 digits
+  var charCode = e.which ? e.which : event.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+  if(e.target.value.length > 11) {
+    // e.target.value = e.target.value.substr(0, 11);
+    return false;
+  }
 
   /* TODO: retrieve the value from the text input */
   var mytextbox = e.target.value;
@@ -24,7 +31,7 @@ function myKeyPress(e){
 
 
 
-  // TODO: Add a condition to ignore entries beyond 10 digits
+ 
   
 // TODO: set the value of the textbox with the formatted value
   e.target.value=y;
