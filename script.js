@@ -6,7 +6,7 @@ function myKeyPress(e){
   var mytextbox = e.target.value;
 
 
-  // TODO: set the value of the textbox with the formatted value
+  
 
   var keyPressed;
   if(window.event) { // IE
@@ -25,7 +25,9 @@ function myKeyPress(e){
 
 
   // TODO: Add a condition to ignore entries beyond 10 digits
-
+  
+// TODO: set the value of the textbox with the formatted value
+  e.target.value=y;
 }
 
 function formatPhoneNumber(value){
