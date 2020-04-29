@@ -23,7 +23,7 @@ function myKeyPress(e){
   }
 
   var x = String.fromCharCode(keyPressed);
-  var y = formatPhoneNumber("7189515000");
+  var y = formatPhoneNumber(mytextbox);
 
 
   console.log("Key Pressed = " + x);
@@ -40,6 +40,8 @@ function myKeyPress(e){
 function formatPhoneNumber(value){
 
   /* TODO:  Use replace function to ignore extra - character */
+  value = value.replace(/-/g, "");
+
 
   if(value.length > 3 && value.length <= 6)
     value = value.slice(0,3) + "-" + value.slice(3);
