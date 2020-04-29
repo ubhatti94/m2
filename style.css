@@ -3,3 +3,12 @@
  * 2. The font is a monospaced font
  * (all other design decisions are up to you)
  */
+#textinput {
+    font-family: monospace;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid black;
+ }
+ #textinput:focus {
+    border-bottom: 2px solid lightblue;
+ }
